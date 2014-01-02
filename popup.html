@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ja" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+    <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+        <div>
+            <button id="clickme">click me</button>
+        </div>
+    </div>
+    <div ng-controller="HelloCtrl">
+        <ul>
+            <li ng-repeat="hello in hellos">
+            <span>{{hello.lang}}, {{hello.text}}</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+
+</html>
